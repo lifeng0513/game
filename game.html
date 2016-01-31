@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<title>打字游戏</title>
+	<meta charset = "utf-8"/>
+	<link rel="stylesheet" href="stylesheets/game.css"/>
+	<link rel="stylesheet" href="css/font.css"/>
+    <script src="scripts/game.js"></script>
+	<script src="scripts/jQuery.js"></script>
+    <script>
+    window.onload=function(){
+    	var games=new game();
+    	games.play();
+
+
+
+		$(".close").click(function(){
+			$(".tishi").css({
+				display:"none",
+				cursor: "pointer"
+			})
+		})
+
+    }
+    </script>
+	<style>
+		video{width:0;height:0;}
+	</style>
+</head>
+<body>
+<video autoplay="" name="media" loop="loop"><source src="33.mp3" type="audio/mp3"></video>
+
+	<div class="panel">
+		<div class="die">
+			<span>生命:</span><span>10</span>
+		</div>
+		<div class="sore">
+			<span>分数:</span><span>0</span>
+		</div>
+		<div class="xuanze">
+			<select name="" id="guanka">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+			</select>
+	    </div>
+	</div>
+	<div class="over" id="over">
+		 <div class="close">X</div>
+         <span>你输了，再来一次</span>
+	</div>
+
+<div class="tishi">
+	<div class="close" data-role1="close"></div>
+	<div class="sb"><span>再来一次</span></div>
+</div>
+
+<div class="tishi1">
+	<div class="close" data-role1="close"></div>
+	<div class="jx"><span>继续</span></div>
+</div>
+</body>
+</html>
